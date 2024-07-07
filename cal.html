@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+      .body{
+        display: flex;
+          text-align: center;
+          align-items: center;
+      }
+        .calculator{
+            padding: 10px;
+            border-radius: 1em;
+            height: 400px;
+            width: 300px;
+            margin: auto;
+            background:linear-gradient(to bottom right,purple,rgb(255, 0, 191), purple);
+        } 
+        input{
+            width: 64px;
+            height: 60px;
+            border-radius: 4px;
+            margin: 3px ;
+            background:linear-gradient(to bottom right,rgb(179, 172, 172),rgb(226, 226, 226),rgb(255, 255, 255));
+            font-size: 15px;
+            font-weight: 500px;
+            font-style: italic;
+        }
+        .firstrow input{
+            width:284px;
+            border-radius: 4px;
+            text-align: right;
+            font-size: 30px;
+            font-weight: 300;
+        }
+       
+    </style>
+</head>
+<body>
+    
+        <div class="calculator">
+        
+            <div class="firstrow">
+                <input type="text" id="text" name="text" size="15">
+            </div>
+            <div class="secondrow">
+                <input type="button" id="AC" name="AC" value="AC" onclick="text.value=``">
+                <input type="button" id="del" name="del" value="DEL" onclick="text.value=text.value.toString().slice(0,-1)">
+                <input type="button" id="add" name="add" onclick="text.value+=value" value="+">
+                <input type="button" id="minus" name="minus" onclick="text.value+=value" value="-">
+            </div>
+            <div class="third">
+                <input type="button" value="9" onclick="text.value+=value">
+                <input type="button" value="8" onclick="text.value+=value">
+                <input type="button" value="7" onclick="text.value+=value">
+                <input type="button" value="*" onclick="text.value+=value">
+            </div>
+            <div class="fourth">
+                <input type="button" value="6" onclick="text.value+=value">
+                <input type="button" value="5" onclick="text.value+=value">
+                <input type="button" value="4" onclick="text.value+=value">
+                <input type="button" value="/" onclick="text.value+=value">
+            </div>
+            <div class="fifth">
+                <input type="button" value="1" onclick="text.value+=value">
+                <input type="button" value="2" onclick="text.value+=value">
+                <input type="button" value="3" onclick="text.value+=value">
+                <input type="button" value="%" onclick="text.value+=value">
+            </div>
+            <div class="sixth">
+                <input type="button" value="0" onclick="text.value+=value">
+                <input type="button" value="." onclick="text.value+=value">
+                <input type="button" value="00" onclick="text.value+=value">
+                <input type="button" value="=" onclick="text.value=eval(text.value)">
+            </div>
+        </div>
+  
+    
+</body>
+</html>
